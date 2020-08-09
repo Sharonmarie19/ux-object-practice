@@ -37,7 +37,11 @@
     In order to keep track of your plants, you need to store them in your program.
     Complete the createPlant() function, which returns an object representing a plant.
     It should include all of the properties listed in the comment above the function.
+    
 */
+
+
+
 /**
  * createPlant - Produces an object respresenting a plant.  It should have the following properties:
  * @param {string} type - The Type of plant.  Possible values are [ "rose", "orchid", "lily", "lavender", "poppy", "begonia", "snapdragon", "marigold"] 
@@ -50,9 +54,14 @@
  * @param {number} amountOfSunNeeded - 0 to 10, representing the amount of sun needed
  */
 function createPlant(type, isPerennial, leafDescription, leafColor, flowerColor, flowerDescription, gallonsWaterPerWeek, amountOfSunNeeded) {
-    let plant = {};
+    let plant = {
+        type: "rose", 
+        isPerennial: == 
+        
+    };
     // Your Code Here!
     // Create a plant object, populate it with all of the values from the arguments, and return it.
+
     // Hint: You can name every key in your object the same as the variable from the argument to this function.  
     return plant;
 }
