@@ -313,7 +313,7 @@ function cloneRose(plant) {
   // Given a plant, clone it and return the new plant
   // Hint: You do this in the Reading!  copyObject...
 
-  changeColorOfPlant(clone);
+ 
   return clone;
 }
 
