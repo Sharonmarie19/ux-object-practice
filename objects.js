@@ -307,6 +307,7 @@ function calculateWaterUsagePerWeek(estate) {
  * This will use the botanist's special algorithm to make new colors of roses.
  *
  */
+
 function cloneRose(plant) {
   let clone = {};
   // Your Code Here!
