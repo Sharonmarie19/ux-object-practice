@@ -28,7 +28,41 @@
 
     Remember to Save the file before you click Run Code!
 */
-
+class Plant {
+  constructor(type, isPerennial,leafDescription, leafColor, flowerColor, flowerDescription, gallonsWaterPerWeek, amountOfSunNeeded) {
+    this.type = type;
+    this.isPerennial = isPerennial;
+    this.leafDescription = leafDescription;
+    this.leafColor = leafColor;
+    this.flowerColor = flowerColor;
+    this.flowerDescription = flowerDescription;
+    this.gallonsWaterPerWeek = gallonsWaterPerWeek;
+    this.amountOfSunNeeded = amountOfSunNeeded
+  }
+ 
+  // This function is already done for you.
+  // The changes are all highlighted in bold
+  changeColor() {
+    let newColors = ["Amber", "Crimson", "Aqua", "Cerulean Blue", "Flamingo", "Gun Smoke", "Jade", "Merigold", "Mustard", "Periwinkle"];
+    // ~~ Magic Genetic Engineering ~~
+    let randIndex = Math.floor(Math.random() * newColors.length);
+    if (this.isFlawed) {
+        this.flowerDescription = "wilted sad buds with no pedals.";
+        this.flowerColor = null;
+    } else {
+        this.flowerColor = newColors[randIndex];
+    }
+    let randomChance = Math.floor(Math.random() * 3);
+    if (randomChance < 1) {
+        this.isFlawed = true;
+    }
+  }
+  describePlant(){
+    this.plant = plant;
+  }
+  
+}
+ 
 /* ---------------------------------------------------------------------------
     Exercise One
 
@@ -163,31 +197,7 @@ function addPlantToEstate(estate, plant) {
     `A ${plant.name} which has ....`
     But you can just use string concatenation too   "A " + plant.name + " which has ..."
 */
-class Plant {
-  constructor(type, isPerennial, /*etc.. finish the rest of these*/) {
-    this.type = type;
-    this.isPerennial = isPerennial;
-    //etc... finish the rest of these
-  }
- 
-  // This function is already done for you.
-  // The changes are all highlighted in bold
-  changeColor() {
-    let newColors = ["Amber", "Crimson", "Aqua", "Cerulean Blue", "Flamingo", "Gun Smoke", "Jade", "Merigold", "Mustard", "Periwinkle"];
-    // ~~ Magic Genetic Engineering ~~
-    let randIndex = Math.floor(Math.random() * newColors.length);
-    if (this.isFlawed) {
-        this.flowerDescription = "wilted sad buds with no pedals.";
-        this.flowerColor = null;
-    } else {
-        this.flowerColor = newColors[randIndex];
-    }
-    let randomChance = Math.floor(Math.random() * 3);
-    if (randomChance < 1) {
-        this.isFlawed = true;
-    }
-  }
-}
+
 /**
  * describePlant
  * @param {*} plant - A plant object
