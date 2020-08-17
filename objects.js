@@ -344,6 +344,11 @@ function calculateWaterUsagePerWeek(estate) {
 
 function cloneRose(plant) {
   let clone = {};
+  for (let key in plant) {
+    if (plant.hasOwnProperty(key)){
+      clone[key] = plant[key];
+    }
+  }
   // Your Code Here!
   // Given a plant, clone it and return the new plant
   // Hint: You do this in the Reading!  copyObject...
@@ -404,6 +409,11 @@ function changeColorOfPlant(plant) {
  * Otherwise you will produce flowerless roses.
  */
 function cloneAllTheRosesAndChangeTheirColors(estate) {
+  let clonedRoses = [];
+  for (let rose of estate.roseArbor) {
+    clonedRoses.push(cloneRose(rose));
+  }
+  estate.roseArbor = estate.roseArbor.concat(clonedRoses);
   // Your Code Here!
   // for each rose...
   // Hint: Watch out for modifying an array you are currently looping through!  How can you avoid that?
